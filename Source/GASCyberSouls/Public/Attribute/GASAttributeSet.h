@@ -29,33 +29,74 @@ public:
 	// Called after attribute change
 	virtual void PostGameplayEffectExecute(const FGameplayEffectModCallbackData& Data) override;
 	
-	// Health attribute
-	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
-	FGameplayAttributeData Health;
-	ATTRIBUTE_ACCESSORS(UGASAttributeSet, Health);
+	void OnRep_MaxHackProgress(const FGameplayAttributeData& OldMaxHackProgress);
+	void OnRep_BlockCharge(const FGameplayAttributeData& OldBlockCharge);
+	void OnRep_MaxBlockCharge(const FGameplayAttributeData& OldMaxBlockCharge);
+	void OnRep_DodgeCharge(const FGameplayAttributeData& OldDodgeCharge);
+	void OnRep_MaxDodgeCharge(const FGameplayAttributeData& OldMaxDodgeCharge);
+	void OnRep_QuickHackProgress(const FGameplayAttributeData& OldQuickHackProgress);
+	void OnRep_AttackSpeed(const FGameplayAttributeData& OldAttackSpeed);
+	void OnRep_SlashSpeed(const FGameplayAttributeData& OldSlashSpeed);
+	void OnRep_QuickHackSpeed(const FGameplayAttributeData& OldQuickHackSpeed);
+
+
+	// Integrity attribute (player's health in CyberSouls)
+	UPROPERTY(BlueprintReadOnly, Category = "CyberSouls|Attributes")
+	FGameplayAttributeData Integrity;
+	ATTRIBUTE_ACCESSORS(UGASAttributeSet, Integrity);
 	
-	// Maximum Health attribute
-	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
-	FGameplayAttributeData MaxHealth;
-	ATTRIBUTE_ACCESSORS(UGASAttributeSet, MaxHealth);
+	// Max Integrity attribute
+	UPROPERTY(BlueprintReadOnly, Category = "CyberSouls|Attributes")
+	FGameplayAttributeData MaxIntegrity;
+	ATTRIBUTE_ACCESSORS(UGASAttributeSet, MaxIntegrity);
 	
-	// Stamina attribute
-	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
-	FGameplayAttributeData Stamina;
-	ATTRIBUTE_ACCESSORS(UGASAttributeSet, Stamina);
+	// HackProgress attribute (0-100)
+	UPROPERTY(BlueprintReadOnly, Category = "CyberSouls|Attributes")
+	FGameplayAttributeData HackProgress;
+	ATTRIBUTE_ACCESSORS(UGASAttributeSet, HackProgress);
 	
-	// Maximum Stamina attribute
-	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
-	FGameplayAttributeData MaxStamina;
-	ATTRIBUTE_ACCESSORS(UGASAttributeSet, MaxStamina);
+	// Max HackProgress attribute
+	UPROPERTY(BlueprintReadOnly, Category = "CyberSouls|Attributes")
+	FGameplayAttributeData MaxHackProgress;
+	ATTRIBUTE_ACCESSORS(UGASAttributeSet, MaxHackProgress);
 	
-	// Attack Power attribute
-	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
-	FGameplayAttributeData AttackPower;
-	ATTRIBUTE_ACCESSORS(UGASAttributeSet, AttackPower);
+	// BlockCharge attribute (for enemies with block ability)
+	UPROPERTY(BlueprintReadOnly, Category = "CyberSouls|Attributes")
+	FGameplayAttributeData BlockCharge;
+	ATTRIBUTE_ACCESSORS(UGASAttributeSet, BlockCharge);
 	
-	// Defense attribute
-	UPROPERTY(BlueprintReadOnly, Category = "Attributes")
-	FGameplayAttributeData Defense;
-	ATTRIBUTE_ACCESSORS(UGASAttributeSet, Defense);
+	// MaxBlockCharge attribute
+	UPROPERTY(BlueprintReadOnly, Category = "CyberSouls|Attributes")
+	FGameplayAttributeData MaxBlockCharge;
+	ATTRIBUTE_ACCESSORS(UGASAttributeSet, MaxBlockCharge);
+	
+	// DodgeCharge attribute (for enemies with dodge ability)
+	UPROPERTY(BlueprintReadOnly, Category = "CyberSouls|Attributes")
+	FGameplayAttributeData DodgeCharge;
+	ATTRIBUTE_ACCESSORS(UGASAttributeSet, DodgeCharge);
+	
+	// MaxDodgeCharge attribute
+	UPROPERTY(BlueprintReadOnly, Category = "CyberSouls|Attributes")
+	FGameplayAttributeData MaxDodgeCharge;
+	ATTRIBUTE_ACCESSORS(UGASAttributeSet, MaxDodgeCharge);
+	
+	// QuickHackProgress attribute (for tracking casting progress)
+	UPROPERTY(BlueprintReadOnly, Category = "CyberSouls|Attributes")
+	FGameplayAttributeData QuickHackProgress;
+	ATTRIBUTE_ACCESSORS(UGASAttributeSet, QuickHackProgress);
+	
+	// AttackSpeed attribute (cooldown for Attack ability)
+	UPROPERTY(BlueprintReadOnly, Category = "CyberSouls|Attributes")
+	FGameplayAttributeData AttackSpeed;
+	ATTRIBUTE_ACCESSORS(UGASAttributeSet, AttackSpeed);
+	
+	// SlashSpeed attribute (cooldown for Slash ability)
+	UPROPERTY(BlueprintReadOnly, Category = "CyberSouls|Attributes")
+	FGameplayAttributeData SlashSpeed;
+	ATTRIBUTE_ACCESSORS(UGASAttributeSet, SlashSpeed);
+	
+	// QuickHackSpeed attribute (cooldown for QuickHack abilities)
+	UPROPERTY(BlueprintReadOnly, Category = "CyberSouls|Attributes")
+	FGameplayAttributeData QuickHackSpeed;
+	ATTRIBUTE_ACCESSORS(UGASAttributeSet, QuickHackSpeed);
 };

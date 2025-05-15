@@ -19,6 +19,9 @@ public:
 
 	// Called when the game starts
 	virtual void StartPlay() override;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "GAS|HUD")
+	TSubclassOf<AGASCyberSoulsHUD> GASHUDClass;
 	
 	// The default player character class to use
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Game")

@@ -3,6 +3,7 @@
 
 #include "Game/GASGameMode.h"
 #include "Character/GASPlayerCharacter.h"
+#include "Game/GASCyberSoulsHUD.h"
 #include "UObject/ConstructorHelpers.h"
 
 AGASGameMode::AGASGameMode()
@@ -13,6 +14,8 @@ AGASGameMode::AGASGameMode()
 	{
 		DefaultPawnClass = PlayerCharacterBPClass.Class;
 	}
+	
+	
 }
 
 void AGASGameMode::StartPlay()

@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "AbilitySystemInterface.h"
+#include "Game/GASCyberSoulsHUD.h"
 #include "GameplayEffectTypes.h"
 #include "GASCharacterBase.generated.h"
 
