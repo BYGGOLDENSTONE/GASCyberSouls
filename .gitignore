@@ -1,0 +1,90 @@
+# Unreal Engine Generated Folders & Files
+############################################
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+Cooked/ # If you cook content directly in your project folder (less common for source control)
+
+# Note on 'Saved/':
+# While most of 'Saved/' should be ignored, if you have VERY specific, non-user-generated
+# config files under 'Saved/Config/' that *must* be shared, you might need to
+# use negate patterns like '!Saved/Config/MySpecificSharedFile.ini'.
+# However, this is rare. Default project configurations should be in the root 'Config/' folder.
+
+# Visual Studio & Rider
+############################################
+.vs/
+.vscode/
+.idea/
+*.VC.db
+*.VC.opendb
+*.suo
+*.pdb
+*.user
+*.userosscache
+*.sln.docstates
+*.sln.iml
+*.csproj.user
+*.vcxproj.filters
+*.vcxproj.user
+
+# C++ Output & Temporary Files
+############################################
+*.obj
+*.obj.*
+*.pch
+*.lib
+*.dll # Generally, compiled libraries shouldn't be tracked if built from source.
+      # Exception: Pre-compiled third-party binaries might be tracked in a 'ThirdParty' folder,
+      # which itself would NOT be in .gitignore.
+*.exe # Game executables are build products.
+*.elf
+*.so
+*.dylib
+*.exp
+*.ilk
+*.map
+*.sbr
+*.bsc
+
+# OS Generated Files
+############################################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Log Files
+############################################
+*.log
+*.txt # Be careful with this, you might have legitimate .txt files you want to track.
+      # If so, remove this line or make it more specific like 'Logs/*.txt'
+      # and ensure your important .txt files are not in a folder named 'Logs'.
+
+# Crash Report Client
+############################################
+CrashReportClient/
+
+# Other Temporary & Build Files
+############################################
+*-Debug.*
+*-Shipping.*
+*-Test.*
+*.apk
+*.ipa
+*.symbols
+
+# Example for ignoring specific plugin intermediate/binary folders if they somehow aren't caught by global rules
+# Plugins/**/Intermediate/
+# Plugins/**/Binaries/
+# Plugins/**/DerivedDataCache/
+
+# If you use specific tools that generate local files in your project, add their patterns here:
+# MyToolCache/
+# *.mytooltemp
